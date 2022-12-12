@@ -73,7 +73,7 @@ export const createPost = (postTitle) => async (dispatch) => {
       type: CREATE_POST_SUCCESS,
       payload: res.data,
     });
-    getAllPosts();
+    dispatch(getAllPosts());
   } catch (e) {
     dispatch({
       type: CREATE_POST_ERROR,
